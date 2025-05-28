@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Datatypes</h1>
+    <script>
+        var a=8;
+        var b=3;
+        var c=3;
+        var d=null;
+        var e;//undefined
+        document.write("(a==b):"+(a==b) + "<br>");
+        document.write("(b==c):" + (b == c) + "<br>");
+        document.write("d:"+d+"<br>");
+        document.write("e:" + e + "<br>");
+    </script>
+    <p>Click thee button to get time based greeting:</p>
+    <button onclick="myfucntion()">Try it!</button>
+    <p id="hour"></p>
+    <p id="greet"></p>
+    <script>
+        function myfucntion(){
+            var greeting;
+            var time=new Date().getHours();
+            if(time<10){
+                greeting="Good morning";
+            }
+            else if(time<20){
+                greeting="Good Afternoon";
+            }
+            else{
+                greeting="Good night";
+            }
+            document.getElementById("hour").innerHTML="Current hour is: "+time;
+            document.getElementById("greet").innerHTML=greeting;
+        }
+    </script>
+    <h2>JavaScript While loop</h2>
+    <p id="number"></p>
+    <script>
+        var text="";
+        var i=0;
+        while(i<50){
+            text+="<br> The number is: " +i;
+            i+=7;
+        }
+        document.getElementById("number").innerHTML=text;
+    </script>
+</body>
+</html>
